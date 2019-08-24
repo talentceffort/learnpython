@@ -1,3 +1,7 @@
 cat : 고양이
+word : 단어
 apple : 사과
-amazon : 아마존
+bag : 가방
+wallet : 지갑
+soap : 비누
+temple : 절
