@@ -1,7 +1,8 @@
-cat : 고양이
-word : 단어
-apple : 사과
-bag : 가방
-wallet : 지갑
-soap : 비누
-temple : 절
+교회: church
+사과: apple
+자전거: bicycle
+지갑: wallet
+교회: church
+절: tample
+비누: soap
+고양이: dog
