@@ -5,4 +5,4 @@
 교회: church
 절: tample
 비누: soap
-고양이: dog
+고양이: cat
