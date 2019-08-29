@@ -19,12 +19,13 @@ def generate_numbers():
 # 예: [1, 7, 13, 23, 31, 41, 15]
 def draw_winning_numbers():
     winning_numbers = generate_numbers()
+    count = 0
 
-    while True:
+    while count != 1:
         bonus_number = randint(1, 45)
         if bonus_number not in winning_numbers:
             winning_numbers.append(bonus_number)
-            break
+            count += 1
 
     return winning_numbers
 
@@ -32,15 +33,15 @@ def draw_winning_numbers():
 def count_matching_numbers(list1, list2):
     correct = 0
 
-    for i in range(0, len(list1)):
-        if list1[i] in list2:
+    for num in range(0, len(list1)):
+        if list1[num] in list2:
             correct += 1
 
     return correct
 # 로또 등수 확인하기
 def check(numbers, winning_numbers):
     # 코드를 입력하세요
-    matchNumber = count_matching_numbers(numbers, winning_numbers)
+    matchn_number = count_matching_numbers(numbers, winning_numbers[:6])
     bonus = False
 
     # 보너스 번호 일치 여부 확인.
@@ -48,15 +49,15 @@ def check(numbers, winning_numbers):
         if num == winning_numbers[len(winning_numbers) - 1]:
             bonus = True
 
-    if matchNumber == 6:
+    if matchn_number == 6:
         return 1000000000
-    elif matchNumber == 5 and bonus:
+    elif matchn_number == 5 and bonus:
         return 50000000
-    elif matchNumber == 5:
+    elif matchn_number == 5:
         return 1000000
-    elif matchNumber == 4:
+    elif matchn_number == 4:
         return 50000
-    elif matchNumber == 3:
+    elif matchn_number == 3:
         return 5000
     else:
         return 0
